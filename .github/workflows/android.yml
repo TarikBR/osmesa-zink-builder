@@ -22,7 +22,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y libxrandr-dev libxxf86vm-dev libxcb-*-dev libx11-xcb-dev libxfixes-dev libdrm-dev libx11-dev
-          pip3 install meson mako
+          pip3 install meson mako ninja
           export ANDROID_NDK_HOME="$ANDROID_SDK_ROOT/ndk-bundle"
           envsubst <android-${{matrix.arch}} >build-crossfile
           git clone --depth 1 https://gitlab.freedesktop.org/mesa/mesa.git
